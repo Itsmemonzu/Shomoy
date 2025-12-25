@@ -119,7 +119,7 @@ def interactive(console: Console):
                             num + 1
                         } [green][bold]has been unlocked![/][/]\n\n[white][bold]Dear Future Me,[/][/]\n{
                             decryptedMessage[2:-1]
-                        }\n[gray]Press any button to exit[/]"
+                        }\n[gray]Press enter to exit[/]"
                     )
 
                     var = str(input())
