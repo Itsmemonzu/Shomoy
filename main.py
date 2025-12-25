@@ -1,10 +1,9 @@
 import base64
-import msvcrt
 import os
 import platform
 import sys
 import time
-from datetime import date, datetime, timedeltap
+from datetime import date, datetime, timedelta
 
 from cryptography.fernet import Fernet
 from rich import print
@@ -123,7 +122,7 @@ def interactive(console: Console):
                             decryptedMessage[2:-1]
                         }\n[gray]Press any button to exit[/]"
                     )
-                    if msvcrt.getch():
+                    if input():
                         sys.exit()
 
             if now_time < unlock_time:
