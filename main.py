@@ -125,7 +125,7 @@ def interactive(console: Console):
                     if input():
                         sys.exit()
 
-            if now_time < unlock_time:
+            else:
                 print(
                     "[red][bold]Your capsule No.[/][/]"
                     + f" {num} [red][bold]is not unlockable yet.[/][/]"
