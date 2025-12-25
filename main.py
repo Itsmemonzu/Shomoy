@@ -1,14 +1,13 @@
-import base64
 import os
-import platform
 import sys
 import time
-from datetime import date, datetime, timedelta
+from datetime import datetime, timedelta
 
+import keyboard
 from cryptography.fernet import Fernet
 from rich import print
 from rich.console import Console
-from rich.prompt import Confirm, Prompt
+from rich.prompt import Prompt
 from tinydb import Query, TinyDB
 
 # JSON Storage for capsules
@@ -122,7 +121,9 @@ def interactive(console: Console):
                             decryptedMessage[2:-1]
                         }\n[gray]Press any button to exit[/]"
                     )
-                    if input():
+
+                    var = str(input())
+                    if var:
                         sys.exit()
 
             else:
