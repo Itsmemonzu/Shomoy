@@ -72,10 +72,13 @@ def interactive(console: Console):
             with open(keyFile, "rb") as keyFile:
                 readKey = keyFile.read()
                 f = Fernet(readKey)
-
+            user_input = input("Enter days, hours, minutes separated by space: ")
+            days, hours, minutes = map(int, user_input.split())
             message = f.encrypt(input().encode())
             print("[white][bold]Set time limit:[/][/][gray](i.e: 2 (Day/s))[/]")
-            time_limit = datetime.now() + timedelta(days=int(input()))
+            time_limit = datetime.now() + timedelta(
+                days=days, hours=hours, minutes=minutes
+            )
             if isinstance(time_limit, datetime):
                 database.insert(
                     {
