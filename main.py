@@ -72,10 +72,9 @@ def interactive(console: Console):
             with open(keyFile, "rb") as keyFile:
                 readKey = keyFile.read()
                 f = Fernet(readKey)
-            user_input = input("Enter days, hours, minutes separated by space: ")
-            days, hours, minutes = map(int, user_input.split())
             message = f.encrypt(input().encode())
-            print("[white][bold]Set time limit:[/][/][gray](i.e: 2 (Day/s))[/]")
+            user_input = input("Set time limit: (i.e 2 50 30) ")
+            days, hours, minutes = map(int, user_input.split())
             time_limit = datetime.now() + timedelta(
                 days=days, hours=hours, minutes=minutes
             )
