@@ -11,7 +11,7 @@ Installing the program is very easy. Simply clone the repository or download mai
 There you have it!
 
 ## Building
-This program is dependant on [Rich](https://github.com/Textualize/rich?tab=readme-ov-file). To build the program, you need to use Pyinstaller or a compiler of your choice:
+This program is dependant on [Rich](https://github.com/Textualize/rich?tab=readme-ov-file), [Cryptography](https://github.com/pyca/cryptography), [TinyDB](https://github.com/msiemens/tinydb). To build the program, you need to use Pyinstaller or a compiler of your choice:
 ```
 pip install pyinstaller
 ```
