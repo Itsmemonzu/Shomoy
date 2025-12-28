@@ -3,7 +3,6 @@ import sys
 import time
 from datetime import datetime, timedelta
 
-import keyboard
 from cryptography.fernet import Fernet
 from rich import print
 from rich.console import Console
